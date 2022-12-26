@@ -72,11 +72,11 @@ function Typer({ paragraph }) {
       }, 1000);
     }
 
-    document.addEventListener("click", (e) => {
-      if (e.target.classList.contains("newmatch")) {
-        window.location.reload();
-      }
-    });
+    // document.addEventListener("click", (e) => {
+    //   if (e.target.classList.contains("newmatch")) {
+    //     window.location.reload();
+    //   }
+    // });
 
     function gettime() {
       return Math.floor((new Date() - startTime) / 1000);
