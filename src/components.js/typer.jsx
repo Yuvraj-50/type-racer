@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRef, useEffect } from "react";
 import "../css/typer.css";
 import "../css/showResult.css";
-
+import audio from "../assest/keypress.wav";
 function Typer({ paragraph }) {
   //  creating elements for invidiual letters
 
@@ -55,6 +55,8 @@ function Typer({ paragraph }) {
         start = true;
       }
 
+      const sound = new Audio(audio);
+      sound.play();
       inputElement.current.focus();
     }
 
