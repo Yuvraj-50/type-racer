@@ -25,7 +25,7 @@ function SignInPage() {
     <div className="sign-page">
       <div className="sign-card">
         <h1>Sign In</h1>
-        <p>Welcome to Monkey Type</p>
+        <p>Welcome to Horse Type</p>
         <GoogleButton className="googlebtn" onClick={handleGoogleSignIn} />
       </div>
     </div>
