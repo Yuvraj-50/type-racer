@@ -135,8 +135,6 @@ function Typer({ paragraph }) {
       const net_speed =
         (totalLetter - 2) / 5 / (+timerElement.current.textContent / 60);
 
-      console.log(net_speed, Gross_speed);
-
       const accuracy = (Gross_speed * 100) / net_speed;
 
       const data = localStorage.getItem("totalmatch");
@@ -183,9 +181,6 @@ function Typer({ paragraph }) {
       setTotalMatches((prev) => {
         return [...prev, matchData];
       });
-
-      alert("i ma new page");
-
       return;
     }
 
@@ -225,6 +220,14 @@ function Typer({ paragraph }) {
       }
     });
   }
+
+  // const handleSignOut = async () => {
+  //   try {
+  //     await logOut();
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   // returning the created components
   return (

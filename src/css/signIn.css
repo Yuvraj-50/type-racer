@@ -1,0 +1,22 @@
+.sign-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.sign-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  background-color: #2c2e31;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.338);
+}
+
+.googlebtn {
+  margin-top: 2rem;
+}

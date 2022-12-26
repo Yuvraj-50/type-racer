@@ -15,7 +15,6 @@ function Card({ details }) {
   return (
     <div className="card">
       <ul className="details-wrapper">
-        {console.log(details)}
         <li> Your speed : {speed} wpms </li>
         <li> Your Accuracy : {Math.floor(accuracy)}</li>
         <li> Total characteres : {totalCharacter}</li>

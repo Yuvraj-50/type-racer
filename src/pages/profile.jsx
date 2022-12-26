@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "../components.js/card";
 import "../css/profile.css";
+import { UserAuth } from "../context/AuthContext";
 
 function Profile() {
+  const { user } = UserAuth();
   const tenSeonds = [];
   const twentyFiveSeconds = [];
   const fiftySeconds = [];
@@ -37,10 +39,18 @@ function Profile() {
     <article className="container">
       <section id="personal-details">
         <section className="user-details">
-          <span className="user-icon material-symbols-outlined">
-            account_circle
-          </span>
-          <h2>Yuvraj singh</h2>
+          {user?.photoURL ? (
+            <img
+              className="user-display-picture"
+              src={user.photoURL}
+              alt="user picture"
+            />
+          ) : (
+            <span className="user-icon material-symbols-outlined">
+              account_circle
+            </span>
+          )}
+          <h2>{user.displayName}</h2>
         </section>
 
         <section className="typing-speed">
