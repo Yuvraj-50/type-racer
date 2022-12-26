@@ -174,7 +174,7 @@ function Typer({ paragraph }) {
               <li> Total time taken : ${
                 timerElement.current.textContent
               } sec </li>
-              <button  class="newmatch">New match</button>
+              <a href="./" class="newmatch">New match</a>
             </ul>
 
             
@@ -222,14 +222,6 @@ function Typer({ paragraph }) {
       }
     });
   }
-
-  // const handleSignOut = async () => {
-  //   try {
-  //     await logOut();
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
 
   // returning the created components
   return (
