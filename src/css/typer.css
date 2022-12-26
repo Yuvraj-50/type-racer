@@ -1,0 +1,107 @@
+body {
+  background-color: #323437;
+  color: #646669;
+}
+
+.correct {
+  color: white;
+}
+
+.incorrect {
+  color: #ca4754;
+  text-decoration: underline;
+}
+
+.start {
+  position: relative;
+}
+
+.active {
+  position: relative;
+}
+
+.start::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e2b714;
+  left: 0;
+  animation: blink 1s infinite forwards;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 2px;
+  background-color: #e2b714;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  transition: 1s ease;
+  animation: blink 1.5s infinite forwards;
+}
+
+.inputElement {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.letter {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.para-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+.timer {
+  color: #e2b714;
+}
+
+.results {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.showresultul {
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.showresultul > li {
+  margin: 0.3rem;
+}
+
+.newmatch {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: #e2b714;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
